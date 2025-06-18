@@ -1,12 +1,87 @@
-# React + Vite
+# ScanOrigin Matrix Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based dashboard for inspection management of baggage scanners in a matrix environment, developed as part of an internship project at OSI Systems.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Frontend:** Built with React.js and Tailwind CSS for a responsive, user-centric UI.
+- **Multi-Page Navigation:** Seamless routing using React Router.
+- **Modular Components:** Includes Scanner Statistics, Matrix Environment, Follow-On Actions, Station Mapping, Operator Alarm Settings, and more.
+- **RESTful API Integration:** Communicates with a Node.js + Express backend.
+- **Database Management:** Handles data storage and retrieval with MySQL.
+- **Contemporary UX:** Designed for accessibility and usability in operational environments.
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+scanorigin-dashboard/
+├── backend/         # Node.js + Express API and database models
+├── frontend/        # React.js app with Tailwind CSS
+├── README.md
+└── ...
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm or yarn
+- MySQL
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/nmfkmr/backend_scanorigin.git
+   cd scanorigin-dashboard
+   ```
+
+2. **Install backend dependencies:**
+   ```bash
+   cd backend
+   npm install
+   ```
+
+3. **Install frontend dependencies:**
+   ```bash
+   cd ../frontend
+   npm install
+   npm install react-router-dom
+   ```
+
+4. **Configure environment variables:**
+   - Copy `.env.example` to `.env` in both `backend` and `frontend` folders and update with your settings.
+
+5. **Set up the MySQL database:**
+   - Create a database and update credentials in the backend `.env` file.
+   - Run migrations or import provided SQL schema if available.
+
+### Running the Project
+
+- **Start the backend:**
+  ```bash
+  cd backend
+  npm server.js
+  ```
+
+- **Start the frontend:**
+  ```bash
+  cd ../frontend
+  npm run dev
+  ```
+
+- The frontend will typically run on [http://localhost:3000](http://localhost:3000) and the backend on [http://localhost:5000](http://localhost:5000).
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](LICENSE) (or specify your license)
+
+## Acknowledgements
+
+- Developed as part of an internship at OSI Systems.
+- Special thanks to mentors and team members for guidance and support.
