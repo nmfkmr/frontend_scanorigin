@@ -13,6 +13,9 @@ export default function MatrixSidebar() {
         <NavLink to="/matrix/scanners" className={({isActive}) => isActive ? "text-blue-400 font-bold" : "text-white"}>
         Scanners
         </NavLink>
+        <NavLink to="/matrix/operators" className={({isActive}) => isActive ? "text-blue-400 font-bold" : "text-white"}>
+        Operators
+        </NavLink>
         <NavLink to="/matrix/find-bag" className={({isActive}) => isActive ? "text-blue-400 font-bold" : "text-white"}>
         Find Bag
         </NavLink>
